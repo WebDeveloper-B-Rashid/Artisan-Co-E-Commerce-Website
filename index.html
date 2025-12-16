@@ -157,21 +157,44 @@
     width: 130px;
 } */
 
+
+.review-card {
+    height: 300px;
+    border: 2px solid blue;
+   
+}
+
+
 .review-card img{
- 
     align-items: center;
     padding: 5px;
     margin-bottom: 15px;
-    margin-left: 36%;
-    /* margin-right: 40%; */
+    width: 80px;
+    height: 80px;
+   border-radius: 50%;
     border: 2px solid burlywood;
    
+}
+
+.review-image{
+    display: flex;
+    width: 500px;
+    text-align: justify;
+    /* height: 150px; */
+    gap: 30px;
+
+}
+
+.review-image p{
+   /* text-align: center; */
+   margin-top: 1.0rem;
+
 }
 
 
         /* --- 6. Reviews Section --- */
         .reviews { background-color: #333; padding: 3rem 0; text-align: center; color: #fff; }
-        .reviews h3 { margin-bottom: 2rem; }
+        .reviews h3 { margin-bottom: 2rem;}
         .review-card { background-color: #fff; max-width: 600px; margin: 0 auto; padding: 2rem; border-radius: 8px; border-left: 5px solid #007bff; text-align: left; color: #333; }
         .review-text { font-style: italic; margin-bottom: 1rem; }
         .reviewer { font-weight: 600; color: #555; font-size: 0.9rem; }
@@ -394,23 +417,39 @@
                     <div class="review-card" style="margin-bottom: 20px;">
                        
                         <p class="review-text">"The **Artisan Pro Laptop** is exactly as advertised. The QHD screen is fantastic for my design work, and the build quality feels premium—not cheap plastic. The checkout process was flawless, and the use of the **ASK IPG** gateway made me feel very secure about the transaction. Great value for the price!"</p>
-                        <img style="width: 150px; height: 150px; border-radius: 50%; display: flex;" src="https://technosports.co.in/wp-content/uploads/2024/10/1284411977_ayesha.jpg" alt="">
-                        <p class="reviewer">- **Ayesha T.**, Verified Purchase (Laptop)</p>
+                       
+                        <div class="review-image">
+                            <img src="https://technosports.co.in/wp-content/uploads/2024/10/1284411977_ayesha.jpg" alt="">
+                            <p class="reviewer"> **Ayesha T.** <br>Verified Purchase (Laptop)</p>
+                        </div>
                     </div>
 
                     <div class="review-card" style="margin-bottom: 20px;">
-                        <p class="review-text">"I purchased the **1.5 Ton Inverter AC**. The unit cools my room efficiently and is surprisingly quiet. I deducted one star because the **LCS Shipping** delivery window was slightly delayed by one day, but the packaging was robust, and the unit arrived in perfect condition. Excellent energy efficiency."</p>
-                        <img style="width: 150px; height: 150px; border-radius: 50%; display: flex;" src="https://tse4.mm.bing.net/th/id/OIP.pMdnwX1wbXm5jtTimazB1gAAAA?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
-                        <p class="reviewer">- **Kamran S.**, Verified Purchase (AC)</p>
+                            <p class="review-text">"I purchased the **1.5 Ton Inverter AC**. The unit cools my room efficiently and is surprisingly quiet. I deducted one star because the **LCS Shipping** delivery window was slightly delayed by one day, but the packaging was robust, and the unit arrived in perfect condition. Excellent energy efficiency."</p>
+                        <div class="review-image">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.pMdnwX1wbXm5jtTimazB1gAAAA?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                            <p class="reviewer"> **Kamran S.** <br>Verified Purchase (AC)</p>
+                        </div>
                     </div>
 
-                    <div class="review-card">
-                        <p class="review-text">"I normally struggle with online clothing sizing, but the **Performance Slim Jeans** fit absolutely perfectly. The stretch material is comfortable all day, and the denim color is rich. The prompt customer service team helped me confirm my size beforehand. I will definitely be a repeat customer for their clothing line!"</p>
-                        <img style="width: 150px; height: 150px; border-radius: 50%; display: flex;" src="https://tse1.explicit.bing.net/th/id/OIP.mynJ5nK8mz0bNFfRsJjFEQHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
-                        <p class="reviewer">- **Sana P.**, Verified Purchase (Jeans)</p>
+
+                    <div class="review-card" style="margin-bottom: 20px;">
+                            <p class="review-text">"I normally struggle with online clothing sizing, but the **Performance Slim Jeans** fit absolutely perfectly. The stretch material is comfortable all day, and the denim color is rich. The prompt customer service team helped me confirm my size beforehand. I will definitely be a repeat customer for their clothing line!"</p>
+                        <div class="review-image">
+                           <img src="https://tse1.explicit.bing.net/th/id/OIP.mynJ5nK8mz0bNFfRsJjFEQHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                             <p class="reviewer"> **Sana P.** <br> Verified Purchase (Jeans)</p>
+                        </div>
                     </div>
+
+                    
+                    <!-- <div class="review-card" style="margin-bottom: 20px;">                       
+                            <p class="review-text">"I normally struggle with online clothing sizing, but the **Performance Slim Jeans** fit absolutely perfectly. The stretch material is comfortable all day, and the denim color is rich. The prompt customer service team helped me confirm my size beforehand. I will definitely be a repeat customer for their clothing line!"</p>
+                        <div class="review-card"> 
+                            <img src="https://tse1.explicit.bing.net/th/id/OIP.mynJ5nK8mz0bNFfRsJjFEQHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                            <p class="reviewer"> **Sana P.** <br> Verified Purchase (Jeans)</p>
+                        </div>
         
-            </div>
+                    </div> -->
         </section>
         
     </main>

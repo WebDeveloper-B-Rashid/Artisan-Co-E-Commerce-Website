@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Co. | Optimized E-commerce Template</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Artisan X-Stream Smartphone",
+      "description": "Flagship smartphone featuring 108MP camera and 5G connectivity. Optimized for speed and mobile productivity.",
+      "sku": "ELEC-SMRTX01",
+      "image": "https://example.com/images/electronics/smartphone.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Artisan Tech"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "1240"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://example.com/product/xstream-phone",
+        "priceCurrency": "PKR",
+        "price": "99999",
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Artisan Co."
+        }
+      }
+    }
+    </script>
+    
+    <style>
+        /* --- 1. Global Reset & Setup --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7f7f7;
+            scroll-behavior: smooth;
+        }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 1rem 0; }
+
+        /* --- 2. Header & Navigation --- */
+        .header { background-color: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .header h1 { font-size: 1.5rem; font-weight: 700; }
+        .nav a { text-decoration: none; color: #333; font-size: 0.9rem; margin-left: 1rem; transition: color 0.3s; }
+        .nav a:hover { color: #007bff; }
+
+        /* --- 3. Buttons & Elements --- */
+        .btn { display: inline-block; background-color: #333; color: #fff; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; transition: background-color 0.3s ease; }
+        .btn:hover { background-color: #555; }
+        .btn-small { background-color: #555; padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 2px; color: #fff; text-decoration: none; transition: background-color 0.3s ease; margin-top: 0.5rem; }
+        .btn-small:hover { background-color: #333; }
+
+        /* --- 4. Hero Section --- */
+        .hero { background-color: #fff; text-align: center; padding: 4rem 0 3rem; margin-bottom: 2rem; }
+        .hero .tagline { font-size: 0.9rem; color: #888; margin-bottom: 0.5rem; }
+        .hero h2 { font-size: 2.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 1rem; }
+        .hero p { margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+        /* --- 5. Products & Categories Sections --- */
+        .category-section { padding: 3rem 0; background-color: #fff; margin-bottom: 2rem; border-bottom: 1px solid #eee; }
+        .category-section:nth-child(even) { background-color: #f0f0f0; } 
+
+        .category-section h3 { font-size: 1.8rem; margin-bottom: 2rem; text-align: center; }
+
+        .product-grid {
+            display: flex;
+            flex-direction: column; 
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            width: 100%; 
+            max-width: 350px;
+            text-align: center;
+        }
+
+        /* Image Styling (Lazy Loaded) */
+        .product-card img {
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            display: block;
+            background-color: #e0e0e0; 
+        }
+
+        .product-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #cc0000;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .features {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .features li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: green;
+            font-weight: 600;
+        }
+
+        /* .reviews-container{
+            display: flex;
+            flex-direction: column; 
+            gap: 2rem;
+            align-items: center;
+
+        } */
+
+  
+
+/* .reviews-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+} */
+
+.review-card img{
+ 
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-left: 36%;
+    /* margin-right: 40%; */
+    border: 2px solid burlywood;
+   
+}
+
+
+        /* --- 6. Reviews Section --- */
+        .reviews { background-color: #333; padding: 3rem 0; text-align: center; color: #fff; }
+        .reviews h3 { margin-bottom: 2rem; }
+        .review-card { background-color: #fff; max-width: 600px; margin: 0 auto; padding: 2rem; border-radius: 8px; border-left: 5px solid #007bff; text-align: left; color: #333; }
+        .review-text { font-style: italic; margin-bottom: 1rem; }
+        .reviewer { font-weight: 600; color: #555; font-size: 0.9rem; }
+        
+        /* --- 7. Footer --- */
+        .footer { background-color: #333; color: #fff; padding: 2rem 0; font-size: 0.8rem; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; text-align: left; }
+        .footer-col h4 { color: #fff; margin-bottom: 0.75rem; font-size: 1rem; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col a { color: #ccc; text-decoration: none; line-height: 1.8; display: block; font-size: 0.9rem; }
+        .footer-col .copyright { margin-top: 1.5rem; font-size: 0.75rem; color: #888; }
+        .payment-logos { margin-top: 0.5rem; font-weight: 600; }
+
+        /* --- 8. Desktop Media Query --- */
+        @media (min-width: 768px) {
+            .hero { padding: 8rem 0 6rem; }
+            .hero h2 { font-size: 4rem; }
+            .product-grid { flex-direction: row; justify-content: space-between; gap: 1.5rem; }
+            .product-card { width: 23%; max-width: none; } /* Adjusted width for 4 products per row */
+            .footer-grid { grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Artisan Co.</h1>
+            <nav class="nav">
+                <a href="#electronics">Electronics</a>
+                <a href="#clothing">Clothing</a>
+                <a href="#home-appliances">Home</a>
+                <a href="#reviews">Reviews</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="tagline">Mobile-First, Optimized for Speed (PageSpeed 90+)</p>
+                <h2>Premium Products. <br>Automated Logistics & Payments.</h2>
+                <p>Featuring JazzCash/ASK IPG payments and automated LCS Shipping integration.</p>
+                <a href="#electronics" class="btn">Shop Categories</a>
+            </div>
+        </section>
+
+        <section id="electronics" class="category-section">
+            <div class="container">
+                <h3>📱 Electronics: Gadgets & Peripherals</h3>
+                <div class="product-grid">
+                    
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIeHs23_hTJtiHEKTjh533HG90m1OSCaMM9Q&s"  alt="Artisan X-Stream Smartphone" loading="lazy">
+                        <h4>X-Stream Smartphone</h4>
+                        <p class="price">PKR 99,999</p>
+                        <ul class="features">
+                            <li>**Feature:** 108MP Camera, 5G</li>
+                            <li>6.7-inch AMOLED Display</li>
+                            <li>256GB Storage, Dual SIM</li>
+                        </ul>
+                        <a href="#" class="btn-small">Buy Now</a>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://artisantech.com.bd/wp-content/uploads/2025/03/1706730735.webp" alt="Artisan Pro Laptop" loading="lazy">
+                        <h4>Artisan Pro Laptop</h4>
+                        <p class="price">PKR 145,000</p>
+                        <ul class="features">
+                            <li>**Processor:** Intel Core i7</li>
+                            <li>16GB RAM, 512GB SSD</li>
+                            <li>14-inch QHD Display, 12h Battery</li>
+                        </ul>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </article>
+                    
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://m.media-amazon.com/images/I/71mnggPRUtL._AC_UF894,1000_QL80_.jpg" alt="Aura ANC Headphones" loading="lazy">
+                        <h4>Aura ANC Headphones</h4>
+                        <p class="price">PKR 14,500</p>
+                        <ul class="features">
+                            <li>**Feature:** Active Noise Cancelling</li>
+                            <li>50mm Drivers, 30h Playtime</li>
+                            <li>Foldable design, USB-C Charging</li>
+                        </ul>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </article>
+                    
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://shop.grandstores.ae/media/catalog/product/cache/c5b0e6136a6dd7f7d91d8b889ed40f35/b/u/bundle-1gs-min.jpg"  alt="VlogMaster Camera" loading="lazy">
+                        <h4>VlogMaster Mirrorless Camera</h4>
+                        <p class="price">PKR 75,900</p>
+                        <ul class="features">
+                            <li>**Sensor:** 24MP Full-Frame</li>
+                            <li>4K Video Recording at 60fps</li>
+                            <li>Flip-out screen for vlogging</li>
+                        </ul>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section id="clothing" class="category-section">
+            <div class="container">
+                <h3>👕 Clothing: Sustainable Apparel</h3>
+                <div class="product-grid">
+                    
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://tse1.explicit.bing.net/th/id/OIP.4VQBiXMwVXz4DsK1W6CIAQHaHa?cb=ucfimg2&pid=ImgDet&ucfimg=1&w=195&h=195&c=7&o=7&rm=3" alt="Organic Cotton T-Shirt" loading="lazy">
+                        <h4>Organic Cotton T-Shirt</h4>
+                        <p class="price">PKR 1,950</p>
+                        <ul class="features">
+                            <li>**Material:** 100% Organic Cotton</li>
+                            <li>Soft touch, Relaxed fit</li>
+                            <li>Available in 5 colors (S-XXL)</li>
+                        </ul>
+                        <a href="#" class="btn-small">Select Size</a>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://th.bing.com/th/id/OIP.P2RzhDDw7AlgSHWyKCOHaAHaHa?w=185&h=185&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Performance Slim Jeans" loading="lazy">
+                        <h4>Performance Slim Jeans</h4>
+                        <p class="price">PKR 7,900</p>
+                        <ul class="features">
+                            <li>**Cut:** Slim Tapered Fit</li>
+                            <li>Stretch Denim for mobility</li>
+                            <li>Water-repellent finish</li>
+                        </ul>
+                        <a href="#" class="btn-small">Select Size</a>
+                    </article>
+                    
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://weatherproofgarment.com/cdn/shop/files/S23423_Front.jpg?v=1708635271&width=700" alt="All-Weather Jacket" loading="lazy">
+                        <h4>All-Weather Utility Jacket</h4>
+                        <p class="price">PKR 14,999</p>
+                        <ul class="features">
+                            <li>**Feature:** Wind & Water Proof</li>
+                            <li>Adjustable Hood and Waist</li>
+                            <li>Recycled Polyester Shell</li>
+                        </ul>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://celebzero.com/wp-content/uploads/2023/07/Trail-Running-Shoes.webp" alt="Trail Runner Shoes" loading="lazy">
+                        <h4>Aero Trail Runner Shoes</h4>
+                        <p class="price">PKR 9,500</p>
+                        <ul class="features">
+                            <li>**Sole:** High-Traction Rubber</li>
+                            <li>Lightweight Knit Upper</li>
+                            <li>Cushioned Midsole Support</li>
+                        </ul>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="home-appliances" class="category-section">
+            <div class="container">
+                <h3>🏡 Home Appliances: Essential Comfort</h3>
+                <div class="product-grid">
+                    
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://th.bing.com/th/id/OIP.vXnMAOFlliuWaJld19O_mgHaH_?w=162&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" alt="Inverter Fridge" loading="lazy">
+                        <h4>Smart Inverter Refrigerator</h4>
+                        <p class="price">PKR 125,000</p>
+                        <ul class="features">
+                            <li>**Capacity:** 500 Liters, Dual-door</li>
+                            <li>Inverter Technology (Energy Save)</li>
+                            <li>Frost-free operation</li>
+                        </ul>
+                        <a href="#" class="btn-small">Buy Now</a>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://tse4.mm.bing.net/th/id/OIP.Wr9CCAujgsTSXSC4IQTGmAHaJB?cb=ucfimg2&pid=ImgDet&ucfimg=1&w=195&h=238&c=7&o=7&rm=3" alt="8kg Washing Machine" loading="lazy">
+                        <h4>8kg Front Load Washer</h4>
+                        <p class="price">PKR 65,000</p>
+                        <ul class="features">
+                            <li>**Feature:** 14 Wash Programs</li>
+                            <li>High Spin Speed, Low Noise</li>
+                            <li>Auto-Dosing Technology</li>
+                        </ul>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </article>
+                    
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://tse3.mm.bing.net/th/id/OIP.-8nRcVvRcgd5HiQLzKhRnQHaHZ?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy">
+                        <h4>25L Digital Microwave Oven</h4>
+                        <p class="price">PKR 12,900</p>
+                        <ul class="features">
+                            <li>**Capacity:** 25 Liters</li>
+                            <li>10 Power Levels, Quick Defrost</li>
+                            <li>Child Safety Lock Feature</li>
+                        </ul>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </article>
+
+                    <article class="product-card">
+                        <img class="lazy-image" src="https://tse1.mm.bing.net/th/id/OIP.iOPX6P9s_RogJEfo8UTg2AHaHa?cb=ucfimg2&pid=ImgDet&ucfimg=1&w=195&h=195&c=7&o=7&rm=3" loading="lazy">
+                        <h4>1.5 Ton Inverter AC</h4>
+                        <p class="price">PKR 85,000</p>
+                        <ul class="features">
+                            <li>**Feature:** T3 Tropicalized Compressor</li>
+                            <li>Self-Cleaning Function</li>
+                            <li>High Energy Efficiency Ratio</li>
+                        </ul>
+                        <a href="#" class="btn-small">Add to Cart</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+            <div class="reviews-container">
+                <h3>⭐ Verified Customer Reviews</h3>
+        
+                    <div class="review-card" style="margin-bottom: 20px;">
+                       
+                        <p class="review-text">"The **Artisan Pro Laptop** is exactly as advertised. The QHD screen is fantastic for my design work, and the build quality feels premium—not cheap plastic. The checkout process was flawless, and the use of the **ASK IPG** gateway made me feel very secure about the transaction. Great value for the price!"</p>
+                        <img style="width: 150px; height: 150px; border-radius: 50%; display: flex;" src="https://technosports.co.in/wp-content/uploads/2024/10/1284411977_ayesha.jpg" alt="">
+                        <p class="reviewer">- **Ayesha T.**, Verified Purchase (Laptop)</p>
+                    </div>
+
+                    <div class="review-card" style="margin-bottom: 20px;">
+                        <p class="review-text">"I purchased the **1.5 Ton Inverter AC**. The unit cools my room efficiently and is surprisingly quiet. I deducted one star because the **LCS Shipping** delivery window was slightly delayed by one day, but the packaging was robust, and the unit arrived in perfect condition. Excellent energy efficiency."</p>
+                        <img style="width: 150px; height: 150px; border-radius: 50%; display: flex;" src="https://tse4.mm.bing.net/th/id/OIP.pMdnwX1wbXm5jtTimazB1gAAAA?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                        <p class="reviewer">- **Kamran S.**, Verified Purchase (AC)</p>
+                    </div>
+
+                    <div class="review-card">
+                        <p class="review-text">"I normally struggle with online clothing sizing, but the **Performance Slim Jeans** fit absolutely perfectly. The stretch material is comfortable all day, and the denim color is rich. The prompt customer service team helped me confirm my size beforehand. I will definitely be a repeat customer for their clothing line!"</p>
+                        <img style="width: 150px; height: 150px; border-radius: 50%; display: flex;" src="https://tse1.explicit.bing.net/th/id/OIP.mynJ5nK8mz0bNFfRsJjFEQHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                        <p class="reviewer">- **Sana P.**, Verified Purchase (Jeans)</p>
+                    </div>
+        
+            </div>
+        </section>
+        
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-col about-us">
+                <h4>Artisan Co.</h4>
+                <p>Curating quality products for a modern lifestyle. We prioritize performance, security, and clean code.</p>
+                <p class="copyright">Reliable maintenance and priority bug fixes all the way until **31-01-2026**.</p>
+            </div>
+
+            <div class="footer-col customer-service">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Order Tracking (LCS)</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col policies">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Payment Security (ASK IPG)</a></li>
+                    <li><a href="#">Clear Technical Documentation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col payments">
+                <h4>Payment & Shipping</h4>
+                <p>Secure Payments via:</p>
+                <div class="payment-logos">
+                    <span>**JazzCash**</span> | <span>**ASK IPG**</span> | <span>Visa/Mastercard</span>
+                </div>
+                <p style="margin-top: 10px; color: #ccc;">Shipping Partner: **LCS Shipping**</p>
+            </div>
+
+        </div>
+    </footer>
+    
+    <script>
+        /**
+         * LAZY LOADING SCRIPT (Performance Optimization)
+         * Uses the Intersection Observer API for efficient image loading.
+         */
+        function loadFullImage(image) {
+            if (image.dataset.src) {
+                image.src = image.dataset.src;
+                image.removeAttribute('data-src');
+                image.classList.remove('lazy-image');
+            }
+        }
+
+        if ('IntersectionObserver' in window) {
+            const lazyImages = document.querySelectorAll('.lazy-image');
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const image = entry.target;
+                        loadFullImage(image);
+                        observer.unobserve(image);
+                    }
+                });
+            }, {
+                // Load images slightly before they enter the viewport
+                rootMargin: '0px 0px 200px 0px', 
+                threshold: 0
+            });
+
+            lazyImages.forEach(image => {
+                observer.observe(image);
+            });
+            
+        } else {
+            // Fallback for older browsers
+            document.querySelectorAll('.lazy-image').forEach(loadFullImage);
+        }
+    </script>
+</body>
+</html>
